@@ -8,6 +8,7 @@
 # xj 2024
 
 import os
+import inspect
 
 
 def generate_text_yield(n, chars):
@@ -70,8 +71,15 @@ if __name__ == '__main__':
 
     g = generate_text_yield(3, "abcd")
     print(g)
+    # print(g.__next__())
+    # print(g.__next__())
+    # print(g.__next__())
+    # print(g.__next__())
     print(g.__next__())
-    print(g.__next__())
-    print(g.__next__())
-    print(g.__next__())
+    # print(g.__next__())
+    # print(g.__next__())
+    # print(g.__next__())
+    # print(g.__next__())
+    for c in g:
+        print(c)
 
