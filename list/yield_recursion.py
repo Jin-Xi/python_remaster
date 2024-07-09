@@ -30,8 +30,8 @@ def generate_text_yield(n, chars):
         """
         pw_list = generate_text_yield(n - 1, chars)
         for pw in pw_list:
-            for c in chars:
-                yield pw + c
+            for tmp in chars:
+                yield pw + tmp
 
 
 # 错误示范：在递归过程中使用了return导致当前层递归中的循环无法继续，只会输出一个结果，此写法只适用于结果为1的搜索，不适用于遍历
